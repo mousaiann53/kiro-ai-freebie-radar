@@ -35,16 +35,23 @@ export function filterOffers(offers: readonly Offer[], filter: OfferFilter, toda
   );
 }
 
+/**
+ * Req 3 helper: compares two deadlines. Empty/invalid deadlines always sort last
+ * (regardless of direction); valid deadlines order by `direction`. Returns a
+ * standard comparator number (negative, zero, positive).
+ */
+export function compareDeadlines(a: string, b: string, direction: SortDirection): number {
+  const sign = direction === 'asc' ? 1 : -1;
+  const aValid = isValidDateKey(a);
+  const bValid = isValidDateKey(b);
+  if (!aValid || !bValid) return Number(!aValid) - Number(!bValid);
+  if (a === b) return 0;
+  return (a < b ? -1 : 1) * sign;
+}
+
 /** Req 3: sort by deadline; empty/invalid deadlines always last. Returns a new array. */
 export function sortOffersByDeadline(offers: readonly Offer[], direction: SortDirection = 'asc'): Offer[] {
-  const sign = direction === 'asc' ? 1 : -1;
-  return [...offers].sort((a, b) => {
-    const aValid = isValidDateKey(a.deadline);
-    const bValid = isValidDateKey(b.deadline);
-    if (!aValid || !bValid) return Number(!aValid) - Number(!bValid);
-    if (a.deadline === b.deadline) return 0;
-    return (a.deadline < b.deadline ? -1 : 1) * sign;
-  });
+  return [...offers].sort((a, b) => compareDeadlines(a.deadline, b.deadline, direction));
 }
 
 /** Req 4.2: returns field → message for every invalid field (empty object = valid). */

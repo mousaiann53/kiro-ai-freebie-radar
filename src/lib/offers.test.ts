@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Offer, OfferDraft } from '../types';
-import { filterOffers, getOfferStatus, isValidDateKey, sortOffersByDeadline, toDateKey, validateOffer } from './offers';
+import { compareDeadlines, filterOffers, getOfferStatus, isValidDateKey, sortOffersByDeadline, toDateKey, validateOffer } from './offers';
 
 const TODAY = new Date(2026, 8, 26); // 2026-09-26 local
 
@@ -46,6 +46,33 @@ describe('filterOffers', () => {
   it('all/all returns everything; empty input returns []', () => {
     expect(filterOffers(list, { category: 'all', status: 'all' }, TODAY)).toHaveLength(3);
     expect(filterOffers([], { category: 'free-trial', status: 'active' }, TODAY)).toEqual([]);
+  });
+});
+
+describe('compareDeadlines', () => {
+  it('orders valid deadlines ascending', () => {
+    expect(compareDeadlines('2026-01-01', '2027-05-01', 'asc')).toBeLessThan(0);
+    expect(compareDeadlines('2027-05-01', '2026-01-01', 'asc')).toBeGreaterThan(0);
+  });
+  it('orders valid deadlines descending', () => {
+    expect(compareDeadlines('2026-01-01', '2027-05-01', 'desc')).toBeGreaterThan(0);
+    expect(compareDeadlines('2027-05-01', '2026-01-01', 'desc')).toBeLessThan(0);
+  });
+  it('treats equal valid deadlines as a tie in both directions', () => {
+    expect(compareDeadlines('2026-01-01', '2026-01-01', 'asc')).toBe(0);
+    expect(compareDeadlines('2026-01-01', '2026-01-01', 'desc')).toBe(0);
+  });
+  it('sorts empty/invalid deadlines last regardless of direction', () => {
+    expect(compareDeadlines('2026-01-01', '', 'asc')).toBeLessThan(0);
+    expect(compareDeadlines('2026-01-01', '', 'desc')).toBeLessThan(0);
+    expect(compareDeadlines('', '2026-01-01', 'asc')).toBeGreaterThan(0);
+    expect(compareDeadlines('', '2026-01-01', 'desc')).toBeGreaterThan(0);
+    expect(compareDeadlines('tbd', '2026-01-01', 'asc')).toBeGreaterThan(0);
+  });
+  it('treats two undated/invalid deadlines as a tie', () => {
+    expect(compareDeadlines('', '', 'asc')).toBe(0);
+    expect(compareDeadlines('tbd', '', 'desc')).toBe(0);
+    expect(compareDeadlines('bad', 'nope', 'asc')).toBe(0);
   });
 });
 
