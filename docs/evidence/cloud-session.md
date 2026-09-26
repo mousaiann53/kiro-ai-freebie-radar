@@ -30,3 +30,7 @@ Five new unit tests were added for `compareDeadlines`. No existing tests changed
 - TypeScript strict, no `any`; reused the existing `SortDirection` type from `src/types.ts`.
 - Business logic stays in a pure function under `src/lib/`; the helper does not mutate inputs.
 - No new runtime dependencies added.
+
+## Cloud configuration
+
+Before starting the session, `.kiro/steering/` (project-standards, offer-data) and `.kiro/agents/` (freebie-curator) were uploaded via Kiro Web → Settings → Configuration Sync, so the cloud sandbox used the same steering and agent setup as the local IDE. The session was started from Kiro Web with the `kiro-ai-freebie-radar` repo attached, and delivered its work as [PR #1](https://github.com/mousaiann53/kiro-ai-freebie-radar/pull/1) (branch `cloud-session-compare-deadlines`).

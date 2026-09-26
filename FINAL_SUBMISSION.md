@@ -1,8 +1,8 @@
 # Final Submission — AI Freebie Radar
 
-Replace `<GITHUB_USER>`, `<VIDEO_URL>` and `<POST_URL>` before submitting.
+Replace `<VIDEO_URL>` and `<POST_URL>` before submitting.
 
-- Repo: https://github.com/<GITHUB_USER>/kiro-ai-freebie-radar
+- Repo: https://github.com/mousaiann53/kiro-ai-freebie-radar
 - Demo video: <VIDEO_URL>
 - Social post: <POST_URL>
 
@@ -23,9 +23,9 @@ AI Freebie Radar is a lightweight React + TypeScript web app for tracking AI per
 ## 3. Bonus
 
 - **Bonus 2 — Package a Kiro power:** `powers/ai-freebie/` is a complete Agent Plugins power, importable from the repo.
-- **Bonus 1 — Cloud:** not attempted (requires a paid plan).
+- **Bonus 1 — Kiro Web, cloud sessions, cloud configuration:** uploaded the project steering and `freebie-curator` agent with Configuration Sync, then ran a cloud session on the repo that did a test-heavy refactor (extracted `compareDeadlines`, added 5 tests, 27 → 32 passing) and opened PR #1. `docs/evidence/cloud-session.md`
 
-## 4. Demo script (~2:30)
+## 4. Demo script (~2:55)
 
 | Time | Show | Say |
 |---|---|---|
@@ -36,10 +36,11 @@ AI Freebie Radar is a lightweight React + TypeScript web app for tracking AI per
 | 1:10–1:25 | `.kiro/specs/ai-freebie-radar` requirements (EARS) + tasks | Lesson 1 |
 | 1:25–1:35 | `.kiro/steering/project-standards.md` good/bad examples | Lesson 2 |
 | 1:35–1:50 | Agent Hooks panel + `docs/evidence/hook-run.log` | Lesson 3 |
-| 1:50–2:05 | tasks.md task 7 (PBT passed) + terminal `npm run check` (27 passed) | Lesson 4 |
+| 1:50–2:05 | tasks.md task 7 (PBT passed) + terminal `npm run check` (32 passed) | Lesson 4 |
 | 2:05–2:15 | Powers panel showing `ai-freebie`; chat "add an AI freebie" → power activates | Lesson 5 + Bonus 2 |
 | 2:15–2:25 | MCP panel `fetch` connected; `docs/evidence/mcp-fetch.md` | Lesson 6 |
 | 2:25–2:40 | Switch agent to `freebie-curator`, show config + evidence | Lesson 7 |
+| 2:40–2:55 | Kiro Web: Settings → Steering/Agents (synced), cloud session, PR #1 | Bonus 1 |
 
 ## 5. Recording order
 
@@ -51,9 +52,9 @@ AI Freebie Radar is a lightweight React + TypeScript web app for tracking AI per
 
 ## 6. Social post (X / LinkedIn)
 
-> I built AI Freebie Radar for the #KiroUniversity Final: a small React + TypeScript app to track AI credits, free trials and early-access perks, with automatic Active/Expired status, filters, deadline sorting and localStorage. Built with @kirodotdev using specs, steering, hooks, property-based tests, a custom power, a fetch MCP server and a custom agent. #BuildWithKiro
+> I built AI Freebie Radar for the #KiroUniversity Final: a small React + TypeScript app to track AI credits, free trials and early-access perks, with automatic Active/Expired status, filters, deadline sorting and localStorage. Built with @kirodotdev using specs, steering, hooks, property-based tests, a custom power, a fetch MCP server, a custom agent and a Kiro cloud session. #BuildWithKiro
 >
-> Repo: https://github.com/<GITHUB_USER>/kiro-ai-freebie-radar
+> Repo: https://github.com/mousaiann53/kiro-ai-freebie-radar
 > Demo: <VIDEO_URL>
 
 (On LinkedIn, tag @kiro instead of @kirodotdev.)

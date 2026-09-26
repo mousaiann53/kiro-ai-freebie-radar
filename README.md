@@ -74,7 +74,7 @@ Files: `.kiro/agents/freebie-curator.json`, `docs/evidence/custom-agent-run.md`
 
 ### Bonus
 - **Bonus 2 (Package a Kiro power):** `powers/ai-freebie/` is a complete, shareable power (manifest + skill), importable from a folder or from this GitHub repo.
-- **Bonus 1 (Kiro Web / cloud sessions):** paid plans only; not attempted.
+- **Bonus 1 (Kiro Web, cloud sessions, cloud configuration):** steering and the custom agent were uploaded with Configuration Sync, then a cloud session ran a test-heavy refactor (extract `compareDeadlines`, +5 tests, 27 → 32 passing) in the sandbox and opened [PR #1](https://github.com/mousaiann53/kiro-ai-freebie-radar/pull/1). Evidence: `docs/evidence/cloud-session.md`.
 
 ## Notes
 
