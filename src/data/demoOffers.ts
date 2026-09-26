@@ -90,4 +90,17 @@ export const DEMO_OFFERS: readonly Offer[] = [
     notes:
       'Pricing page says "start building free of charge with generous limits"; Free tier is "for developers and small projects getting started with the Gemini API." Exact limits and eligibility requirements not captured here; check the page.',
   },
+  {
+    id: 'demo-azure-free-account',
+    title: 'Azure free account',
+    provider: 'Microsoft Azure',
+    category: 'free-trial',
+    value: '$200 credit for 30 days',
+    deadline: '',
+    requirements: 'New Azure customers only; card verification (temporary $1 authorization)',
+    region: '',
+    url: 'https://azure.microsoft.com/free/',
+    notes:
+      'Also includes 12 months of free amounts for 20+ popular services and 65+ always-free services. Region eligibility not stated on the page; see the full offer terms.',
+  },
 ];
