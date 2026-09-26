@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ai-freebie",
+  "version": "1.0.0",
+  "description": "Add and validate AI perk records (free API credits, trials, early access, student/dev benefits, model events, AI tool discounts) for AI Freebie Radar",
+  "author": { "name": "AI Freebie Radar" },
+  "keywords": ["freebie", "freebies", "ai credits", "api credits", "free credits", "trial", "free trial", "early access", "student pack", "ai perk", "羊毛", "薅羊毛", "福利"],
+  "license": "MIT"
+}

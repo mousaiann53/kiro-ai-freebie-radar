@@ -1,0 +1,17 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Typecheck and test on save",
+      "trigger": "PostFileSave",
+      "description": "After the agent saves a TypeScript file under src/, run tsc --noEmit and vitest, logging results to docs/evidence/hook-run.log",
+      "matcher": "src[\\\\/].*\\.tsx?$",
+      "timeout": 120,
+      "action": {
+        "type": "command",
+        "command": "node scripts/hook-check.mjs",
+        "timeout": 120
+      }
+    }
+  ]
+}
