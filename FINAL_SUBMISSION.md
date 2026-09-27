@@ -1,10 +1,9 @@
 # Final Submission — AI Freebie Radar
 
-Replace `<VIDEO_URL>` and `<POST_URL>` before submitting.
 
 - Repo: https://github.com/mousaiann53/kiro-ai-freebie-radar
-- Demo video: <VIDEO_URL>
-- Social post: <POST_URL>
+- Demo video: https://www.youtube.com/watch?v=PSVZniwImnc
+- Social post: https://x.com/mousai233/status/2104215724948697165
 
 ## 1. Project description (2–3 sentences)
 
@@ -55,7 +54,7 @@ AI Freebie Radar is a lightweight React + TypeScript web app for tracking AI per
 > I built AI Freebie Radar for the #KiroUniversity Final: a small React + TypeScript app to track AI credits, free trials and early-access perks, with automatic Active/Expired status, filters, deadline sorting and localStorage. Built with @kirodotdev using specs, steering, hooks, property-based tests, a custom power, a fetch MCP server, a custom agent and a Kiro cloud session. #BuildWithKiro
 >
 > Repo: https://github.com/mousaiann53/kiro-ai-freebie-radar
-> Demo: <VIDEO_URL>
+> Demo: https://www.youtube.com/watch?v=PSVZniwImnc
 
 (On LinkedIn, tag @kiro instead of @kirodotdev.)
 
